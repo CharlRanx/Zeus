@@ -1,4 +1,4 @@
-package _528__Random_Pick_with_Weight
+package LeetCode
 
 import (
 	"math/rand"
@@ -22,3 +22,9 @@ func (s *Solution) PickIndex() int {
 	x := rand.Intn(s.preSum[len(s.preSum)-1]) + 1
 	return sort.SearchInts(s.preSum, x)
 }
+
+/**
+ * Your Solution object will be instantiated and called as such:
+ * obj := Constructor(w);
+ * param_1 := obj.PickIndex();
+ */
