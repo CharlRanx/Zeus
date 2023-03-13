@@ -29,3 +29,18 @@ func (curNode *TreeNode) Insert(node *TreeNode) {
 		}
 	}
 }
+
+func PreorderTraversal(root *TreeNode) []int {
+	var preorder func(*TreeNode)
+	result := make([]int, 0)
+	preorder = func(node *TreeNode) {
+		if node == nil {
+			return
+		}
+		result = append(result, node.Val)
+		preorder(node.Left)
+		preorder(node.Right)
+	}
+	preorder(root)
+	return result
+}
