@@ -1,4 +1,4 @@
-package adapter
+package adapter_pattern
 
 type Target interface {
 	Request() string
